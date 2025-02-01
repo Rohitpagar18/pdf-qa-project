@@ -1,0 +1,10 @@
+langchain-core==0.3.33
+chromadb==0.6.0
+ollama==0.4.7
+langchain-ollama==0.2.3
+pypdf==3.17.4
+python-dotenv==1.0.1
+pytest==8.2.2
+fastapi==0.110.0
+uvicorn==0.27.1
+#requests==2.32.3
