@@ -6,6 +6,7 @@ from langchain_chroma import Chroma
 from get_embedding_function import get_embedding_function
 
 CHROMA_PATH = "chroma"
+
 PROMPT_TEMPLATE = """
 Answer questions strictly based on the provided context.
 
@@ -43,9 +44,11 @@ def query_rag(query_text: str, category: str = None):  # Fixed parameter name
     
     model = OllamaLLM(model="deepseek-r1:1.5b")
     response = model.invoke(prompt)
-    
-    print(f"\nResponse: {response}")  # Uncomment this
-    return response
+
+    sources = [doc.metadata.get("id", None) for doc, _score in results]
+    formatted_response = f"Response: {response}\nSources: {sources}"
+    print(formatted_response)
+    return formatted_response
 
 def main():
     parser = argparse.ArgumentParser()
