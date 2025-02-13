@@ -10,9 +10,8 @@ Retrieval-Augmented Generation pipeline for querying PDF documents using:
 
 ## Features
 ✅ PDF Document Ingestion  
-✅ Chunking Strategy
+✅ Chunking Strategy 
 ✅ CLI Interface for Querying  
-✅ Docker Support  
 
 ## Installation
 ```bash
